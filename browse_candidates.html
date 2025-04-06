@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post an Opportunity | WorkSense</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images/Background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+    header img {
+      height: 60px;
+    }
+    header h1 {
+      font-size: 2em;
+      color: #55acee;
+    }
+    .container {
+      flex: 1;
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+      padding: 60px 40px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      color: #55acee;
+      margin-bottom: 30px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1em;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      background-color: #55acee;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1e3c56;
+    }
+    .thank-you {
+      display: none;
+      font-size: 1.2em;
+      text-align: center;
+      color: #86d986;
+      margin-top: 30px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 0.9em;
+      color: #888;
+    }
+      nav {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #86d986;
+    }
+  </style>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      document.getElementById('jobForm').style.display = 'none';
+      document.getElementById('thankYou').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <img src="images/LOGO.png" alt="WorkSense Logo">
+      <h1>WorkSense</h1>
+    </div>
+      <nav>
+      <a href="index.html">Home</a>
+      <a href="worker_start.html">Workers</a>
+      <a href="employer_portal.html">Employers</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h2>Post an Opportunity</h2>
+    <form id="jobForm" onsubmit="handleSubmit(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="email">Contact Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="role">Type of Position</label>
+      <select id="role" name="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="Welder">Welder</option>
+        <option value="Forklift Operator">Forklift Operator</option>
+        <option value="Machine Operator">Machine Operator</option>
+        <option value="Material Handler">Material Handler</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="desc">Job Description / Notes</label>
+      <textarea id="desc" name="desc"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div class="thank-you" id="thankYou">
+      ✅ Thank you! We'll reach out to connect you with job-ready candidates.
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 WorkSense. All rights reserved.
+  </footer>
+</body>
+</html>

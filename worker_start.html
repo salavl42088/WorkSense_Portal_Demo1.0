@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Path | WorkSense</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images/Background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+    header img {
+      height: 60px;
+    }
+    header h1 {
+      font-size: 2em;
+      color: #55acee;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 60px;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+    .hero {
+      text-align: center;
+      max-width: 800px;
+    }
+    .hero h2 {
+      font-size: 2.6em;
+      margin-bottom: 10px;
+      color: #55acee;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .options a {
+      display: block;
+      background-color: #55acee;
+      padding: 20px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s;
+      min-width: 250px;
+    }
+    .options a:hover {
+      background-color: #1e3c56;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 0.9em;
+      color: #888;
+    }
+      nav {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #86d986;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <img src="images/LOGO.png" alt="WorkSense Logo">
+      <h1>WorkSense</h1>
+    </div>
+      <nav>
+      <a href="index.html">Home</a>
+      <a href="worker_start.html">Workers</a>
+      <a href="employer_portal.html">Employers</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="hero">
+      <h2>Let’s Find the Right Career Path for You</h2>
+      <p>We’ll help you prove your skills, build your profile, and connect with real job opportunities.</p>
+      <div class="options">
+        <a href="assessments/welding/weld_defects_test.html">Start Welding Assessment</a>
+        <a href="assessments/manufacturing/forklift_operator.html">Start Manufacturing Assessment</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 WorkSense. All rights reserved.
+  </footer>
+</body>
+</html>
