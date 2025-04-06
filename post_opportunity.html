@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post an Opportunity | WorkSense</title>
+  <title>Browse Candidates | WorkSense</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
       background: url('images/Background.png') no-repeat center center fixed;
       background-size: cover;
       color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
     header {
       display: flex;
@@ -32,62 +30,42 @@
       color: #55acee;
     }
     .container {
-      flex: 1;
-      width: 100%;
-      max-width: 700px;
+      max-width: 1000px;
       margin: auto;
-      padding: 60px 40px;
+      padding: 40px 20px;
       background-color: rgba(0, 0, 0, 0.65);
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
     h2 {
       text-align: center;
-      font-size: 2.2em;
+      font-size: 2.4em;
       color: #55acee;
       margin-bottom: 30px;
     }
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-    }
-    form input,
-    form select,
-    form textarea {
-      width: 100%;
-      padding: 12px;
+    .candidate {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 8px;
       margin-bottom: 20px;
-      border-radius: 5px;
-      border: none;
-      font-size: 1em;
     }
-    form textarea {
-      resize: vertical;
-      min-height: 100px;
+    .candidate h3 {
+      margin: 0 0 5px;
+      color: #86d986;
     }
-    button {
+    .candidate p {
+      margin: 5px 0;
+    }
+    .tags {
+      margin-top: 10px;
+    }
+    .tag {
+      display: inline-block;
       background-color: #55acee;
       color: white;
-      padding: 12px 25px;
-      font-size: 1.1em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #1e3c56;
-    }
-    .thank-you {
-      display: none;
-      font-size: 1.2em;
-      text-align: center;
-      color: #86d986;
-      margin-top: 30px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      margin-right: 10px;
+      margin-top: 5px;
     }
     footer {
       text-align: center;
@@ -110,13 +88,6 @@
       color: #86d986;
     }
   </style>
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      document.getElementById('jobForm').style.display = 'none';
-      document.getElementById('thankYou').style.display = 'block';
-    }
-  </script>
 </head>
 <body>
   <header>
@@ -132,34 +103,38 @@
     </nav>
   </header>
   <div class="container">
-    <h2>Post an Opportunity</h2>
-    <form id="jobForm" onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
+    <h2>Browse Skilled Candidates</h2>
 
-      <label for="company">Company Name</label>
-      <input type="text" id="company" name="company" required>
+    <div class="candidate">
+      <h3>Marcus Johnson</h3>
+      <p>Email: marcus.j@email.com</p>
+      <p>Location: Houston, TX</p>
+      <div class="tags">
+        <span class="tag">Welding (6/7)</span>
+        <span class="tag">Forklift Operator (8/10)</span>
+        <span class="tag">Intermediate Level</span>
+      </div>
+    </div>
 
-      <label for="email">Contact Email</label>
-      <input type="email" id="email" name="email" required>
+    <div class="candidate">
+      <h3>Samantha Lee</h3>
+      <p>Email: samantha.lee@email.com</p>
+      <p>Location: Toledo, OH</p>
+      <div class="tags">
+        <span class="tag">Machine Operator (9/10)</span>
+        <span class="tag">Material Handler (7/10)</span>
+        <span class="tag">Pro Level</span>
+      </div>
+    </div>
 
-      <label for="role">Type of Position</label>
-      <select id="role" name="role" required>
-        <option value="">-- Select Role --</option>
-        <option value="Welder">Welder</option>
-        <option value="Forklift Operator">Forklift Operator</option>
-        <option value="Machine Operator">Machine Operator</option>
-        <option value="Material Handler">Material Handler</option>
-        <option value="Other">Other</option>
-      </select>
-
-      <label for="desc">Job Description / Notes</label>
-      <textarea id="desc" name="desc"></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-    <div class="thank-you" id="thankYou">
-      ✅ Thank you! We'll reach out to connect you with job-ready candidates.
+    <div class="candidate">
+      <h3>David Carter</h3>
+      <p>Email: david.c@email.com</p>
+      <p>Location: Bakersfield, CA</p>
+      <div class="tags">
+        <span class="tag">Welding (5/7)</span>
+        <span class="tag">Entry Level</span>
+      </div>
     </div>
   </div>
   <footer>
